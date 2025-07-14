@@ -1,21 +1,19 @@
 
 version: 2
 
-models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
-
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+sources:
+  - name: raw
+    schema: reboot_1999
+    tables:
+      - name: customers
+        identifier: raw_customers1
+      - name: items
+        identifier: raw_items1
+      - name: orders
+        identifier: raw_orders1
+      - name: products
+        identifier: raw_products1
+      - name: stores
+        identifier: raw_stores1
+      - name: supplies
+        identifier: raw_supplies1
